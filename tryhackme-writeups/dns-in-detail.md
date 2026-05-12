@@ -1,4 +1,4 @@
-markdown# DNS in Detail
+# DNS in Detail
 
 **Platform:** TryHackMe  
 **Difficulty:** Easy  
