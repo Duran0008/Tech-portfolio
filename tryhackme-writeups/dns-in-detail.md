@@ -27,7 +27,8 @@ Used the in-browser terminal to query DNS records against a simulated DNS server
 Queried TXT records using nslookup --type=TXT and retrieved the flag. 
 Also identified the CNAME for shop.website.thm, MX priority value, and A record for www.website.thm.
 
-![DNS practical task screenshot](screenshots/dns-practical.png)
+<img width="1919" height="943" alt="dns-practical" src="https://github.com/user-attachments/assets/c26b62b2-de55-430c-a0aa-0715799c07a3" />
+
 
 ## What I Learned
 DNS record types matter beyond just browsing — during reconnaissance, querying MX and TXT 
