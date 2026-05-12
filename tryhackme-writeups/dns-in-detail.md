@@ -1,35 +1,38 @@
-# DNS in Detail — TryHackMe
+markdown# DNS in Detail
+
+**Platform:** TryHackMe  
+**Difficulty:** Easy  
+**Category:** Networking / Fundamentals
 
 ## Overview
-This room introduced DNS and explained how domain names are translated into IP addresses.
-
-## Topics Covered
-- DNS records
-- Recursive DNS lookups
-- Domain names
-- DNS hierarchy
+This room covered how DNS works — how domain names get translated into IP addresses, 
+the different record types, and how the resolution process works step by step.
 
 ## Commands Used
+nslookup website.thm
+nslookup --type=TXT website.thm
+nslookup --type=MX website.thm
+nslookup --type=CNAME shop.website.thm
 
-```bash
-nslookup
-dig
-ping
-```
+## DNS Record Types
 
-## Notes
+**A Record** — Maps a domain to an IPv4 address.  
+**AAAA Record** — Maps a domain to an IPv6 address.  
+**CNAME Record** — Alias pointing to another domain (e.g. shop.website.thm → shops.myshopify.com).  
+**MX Record** — Points to mail servers. Has a priority value — lower number = higher priority.  
+**TXT Record** — Free-text field. Used for SPF/DMARC records to prevent email spoofing.
 
-### A Record
-Maps a domain name to an IPv4 address.
+## Practical Task
+Used the in-browser terminal to query DNS records against a simulated DNS server. 
+Queried TXT records using nslookup --type=TXT and retrieved the flag. 
+Also identified the CNAME for shop.website.thm, MX priority value, and A record for www.website.thm.
 
-### MX Record
-Used for mail servers.
-
-### AAAA Record
-Maps a domain name to an IPv6 address.
+![DNS practical task screenshot](screenshots/dns-practical.png)
 
 ## What I Learned
-I learned how DNS works behind the scenes and how computers locate websites using DNS servers.
+DNS record types matter beyond just browsing — during reconnaissance, querying MX and TXT 
+records can reveal mail providers, SPF configurations, and third-party services a target uses. 
+TXT records in particular are worth checking early in any investigation.
 
-## Screenshots
+Save your screenshot into a screenshots/ folder in the same directory and name it dns-practical.png so the image link works.Sonnet 4.6
 
