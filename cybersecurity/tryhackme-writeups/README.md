@@ -2,7 +2,7 @@
 
 A collection of writeups from rooms I've completed on TryHackMe as part of building my cyber security knowledge and portfolio.
 
-I'm currently working towards a Level 4 Cyber Security Apprenticeship, starting 2027.
+I'm currently working towards a Tech Apprenticeship in cybersecurity, starting 2027.
 
 ---
 
